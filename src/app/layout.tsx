@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: "Begin your journey to a Nasha Mukt life with compassionate, evidence-based treatment.",
     type: "website",
   },
+  verification: {
+    google: "FYd0e-31oEUyod45KfqyV-VI6_W43MrP-84AlPOKd3E",
+  },
 };
 
 export default function RootLayout({
