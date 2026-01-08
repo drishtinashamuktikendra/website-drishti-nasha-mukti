@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,10 +11,7 @@ export const metadata: Metadata = {
     description: "Begin your journey to a Nasha Mukt life with compassionate, evidence-based treatment.",
     type: "website",
   },
-  verification: {
-    google: "FYd0e-31oEUyod45KfqyV-VI6_W43MrP-84AlPOKd3E",
 
-  },
 };
 
 export default function RootLayout({
@@ -25,6 +23,16 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-6QNC2C3DWB" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-6QNC2C3DWB');
+          `}
+        </Script>
       </body>
     </html>
   );
