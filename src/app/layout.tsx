@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Drishti Nasha Mukti Evam Manochikitsa Kendra | Addiction Recovery Center",
-  description: "Ummeed ki Nazar, Nashamukt Safar. Premier rehabilitation center for alcohol and drug de-addiction, mental health care, and holistic recovery in India. 24/7 support available.",
+  description: "Ummeed ki Nazar, Nashamukt Safar. Premier rehabilitation center for alcohol and drug de-addiction, mental health care, and holistic recovery in Bhopal. 24/7 support available.",
   keywords: "nasha mukti kendra, addiction recovery, alcohol de-addiction, drug rehabilitation, mental health, counseling, Delhi, India",
   openGraph: {
     title: "Drishti Nasha Mukti Evam Manochikitsa Kendra",
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "FYd0e-31oEUyod45KfqyV-VI6_W43MrP-84AlPOKd3E",
+
   },
 };
 
