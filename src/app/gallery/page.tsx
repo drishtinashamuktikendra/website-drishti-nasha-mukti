@@ -11,18 +11,18 @@ export default function Gallery() {
 
     const galleryItems = [
         // Rehab Center Images
-        { id: 13, type: "image", category: "rehab-center", title: "Rehab Centre View 1", size: "large", src: "/centre/WhatsApp Image 2026-01-09 at 13.05.57 (1).jpeg" },
-        { id: 14, type: "image", category: "rehab-center", title: "Rehab Centre View 2", size: "medium", src: "/centre/WhatsApp Image 2026-01-09 at 13.05.57.jpeg" },
-        { id: 15, type: "image", category: "rehab-center", title: "Rehab Centre View 3", size: "medium", src: "/centre/WhatsApp Image 2026-01-09 at 13.05.58 (1).jpeg" },
-        { id: 16, type: "image", category: "rehab-center", title: "Rehab Centre View 4", size: "small", src: "/centre/WhatsApp Image 2026-01-09 at 13.05.58.jpeg" },
-        { id: 17, type: "image", category: "rehab-center", title: "Rehab Centre View 5", size: "small", src: "/centre/WhatsApp Image 2026-01-09 at 13.05.59.jpeg" },
-        { id: 18, type: "image", category: "rehab-center", title: "Rehab Centre View 6", size: "large", src: "/centre/WhatsApp Image 2026-01-09 at 13.06.38 (1).jpeg" },
-        { id: 19, type: "image", category: "rehab-center", title: "Rehab Centre View 7", size: "medium", src: "/centre/WhatsApp Image 2026-01-09 at 13.06.38.jpeg" },
-        { id: 20, type: "image", category: "rehab-center", title: "Rehab Centre View 8", size: "small", src: "/centre/WhatsApp Image 2026-01-09 at 13.06.39.jpeg" },
-        { id: 21, type: "image", category: "rehab-center", title: "Rehab Centre View 9", size: "medium", src: "/centre/WhatsApp Image 2026-01-09 at 13.10.29 (1).jpeg" },
-        { id: 22, type: "image", category: "rehab-center", title: "Rehab Centre View 10", size: "large", src: "/centre/WhatsApp Image 2026-01-09 at 13.10.29 (2).jpeg" },
-        { id: 23, type: "image", category: "rehab-center", title: "Rehab Centre View 11", size: "small", src: "/centre/WhatsApp Image 2026-01-09 at 13.10.29.jpeg" },
-        { id: 24, type: "image", category: "rehab-center", title: "Rehab Centre View 12", size: "medium", src: "/centre/WhatsApp Image 2026-01-09 at 13.10.30.jpeg" },
+        { id: 13, type: "image", category: "rehab-center", title: "Rehab Centre View 1", size: "large", src: "/centre/1.jpeg" },
+        { id: 14, type: "image", category: "rehab-center", title: "Rehab Centre View 2", size: "medium", src: "/centre/2.jpeg" },
+        { id: 15, type: "image", category: "rehab-center", title: "Rehab Centre View 3", size: "medium", src: "/centre/3.jpeg" },
+        { id: 16, type: "image", category: "rehab-center", title: "Rehab Centre View 4", size: "small", src: "/centre/4.jpeg" },
+        { id: 17, type: "image", category: "rehab-center", title: "Rehab Centre View 5", size: "small", src: "/centre/5.jpeg" },
+        { id: 18, type: "image", category: "rehab-center", title: "Rehab Centre View 6", size: "large", src: "/centre/6.jpeg" },
+        { id: 19, type: "image", category: "rehab-center", title: "Rehab Centre View 7", size: "medium", src: "/centre/7.jpeg" },
+        { id: 20, type: "image", category: "rehab-center", title: "Rehab Centre View 8", size: "small", src: "/centre/8.jpeg" },
+        { id: 21, type: "image", category: "rehab-center", title: "Rehab Centre View 9", size: "medium", src: "/centre/9.jpeg" },
+        { id: 22, type: "image", category: "rehab-center", title: "Rehab Centre View 10", size: "large", src: "/centre/10.jpeg" },
+        { id: 23, type: "image", category: "rehab-center", title: "Rehab Centre View 11", size: "small", src: "/centre/11.jpeg" },
+        { id: 24, type: "image", category: "rehab-center", title: "Rehab Centre View 12", size: "medium", src: "/centre/12.jpeg" },
     ];
 
     const filters = [

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HeroSlider from "@/components/HeroSlider";
 
 export default function Home() {
   const scrollToSection = (id: string) => {
@@ -14,64 +15,7 @@ export default function Home() {
       {/* Navbar moved to layout */}
 
       {/* Hero Section */}
-      <section className="hero">
-        <div className="container">
-          <div className="hero-content">
-            <div className="hero-text">
-              <div className="hero-badge" data-aos="fade-down">
-                <span className="hero-badge-dot"></span>
-                Since 2025 • Trusted Recovery Center
-              </div>
-              <h1 className="hero-title" data-aos="fade-up" data-aos-delay="100">
-                Begin Your Journey to a <span className="hero-title-green">Nasha Mukt</span> Life
-              </h1>
-              <p className="hero-description" data-aos="fade-up" data-aos-delay="200">
-                Ummeed ki Nazar, Nashamukt Safar — At Drishti Nasha Mukti Evam Manochikitsa Kendra, we provide compassionate,
-                evidence-based treatment for addiction recovery and mental wellness.
-              </p>
-              <div className="hero-buttons" data-aos="fade-up" data-aos-delay="300">
-                <button className="btn btn-green" onClick={() => scrollToSection("contact")}>
-                  Start Recovery Today
-                  <span>→</span>
-                </button>
-                <button className="btn btn-white" onClick={() => scrollToSection("about")}>
-                  Learn More
-                </button>
-              </div>
-            </div>
-            <div className="hero-visual" data-aos="zoom-in" data-aos-delay="200">
-              <div className="hero-image-container">
-                <div className="hero-image-ring"></div>
-                <div className="hero-image-ring"></div>
-                <div className="hero-image-ring"></div>
-                <Image
-                  src="/logo.jpeg"
-                  alt="Drishti Nasha Mukti Kendra"
-                  fill
-                  className="hero-image"
-                  style={{ objectFit: "contain" }}
-                  priority
-                />
-                {/* Floating Cards */}
-                <div className="hero-card hero-card-1">
-                  <div className="hero-card-icon green">🏥</div>
-                  <div className="hero-card-text">
-                    <h4>24/7 Care</h4>
-                    <p>Round-the-clock support</p>
-                  </div>
-                </div>
-                <div className="hero-card hero-card-2">
-                  <div className="hero-card-icon blue">👨‍⚕️</div>
-                  <div className="hero-card-text">
-                    <h4>Expert Doctors</h4>
-                    <p>Certified specialists</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section >
+      <HeroSlider />
 
       {/* About Section */}
       < section className="about section" id="about" >
