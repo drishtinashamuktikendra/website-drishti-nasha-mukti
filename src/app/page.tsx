@@ -1,52 +1,10 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const [counters, setCounters] = useState({ patients: 0, years: 0, doctors: 0, success: 0 });
-  const statsRef = useRef<HTMLElement>(null);
-  const [statsAnimated, setStatsAnimated] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !statsAnimated) {
-          setStatsAnimated(true);
-          animateCounters();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [statsAnimated]);
-
-  const animateCounters = () => {
-    const targets = { patients: 5000, years: 10, doctors: 25, success: 95 };
-    const duration = 2000;
-    const steps = 60;
-    const interval = duration / steps;
-
-    let step = 0;
-    const timer = setInterval(() => {
-      step++;
-      const progress = step / steps;
-      setCounters({
-        patients: Math.floor(targets.patients * progress),
-        years: Math.floor(targets.years * progress),
-        doctors: Math.floor(targets.doctors * progress),
-        success: Math.floor(targets.success * progress),
-      });
-      if (step >= steps) clearInterval(timer);
-    }, interval);
-  };
-
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -79,20 +37,6 @@ export default function Home() {
                 <button className="btn btn-white" onClick={() => scrollToSection("about")}>
                   Learn More
                 </button>
-              </div>
-              <div className="hero-stats" data-aos="fade-up" data-aos-delay="400">
-                <div className="hero-stat">
-                  <div className="hero-stat-number">5000+</div>
-                  <div className="hero-stat-label">Lives Transformed</div>
-                </div>
-                <div className="hero-stat">
-                  <div className="hero-stat-number">95%</div>
-                  <div className="hero-stat-label">Success Rate</div>
-                </div>
-                <div className="hero-stat">
-                  <div className="hero-stat-number">24/7</div>
-                  <div className="hero-stat-label">Support Available</div>
-                </div>
               </div>
             </div>
             <div className="hero-visual" data-aos="zoom-in" data-aos-delay="200">
@@ -127,10 +71,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* About Section */}
-      <section className="about section" id="about">
+      < section className="about section" id="about" >
         <div className="container">
           <div className="about-content">
             <div className="about-image-wrapper" data-aos="fade-right">
@@ -186,10 +130,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Services Section */}
-      <section className="services section" id="services">
+      < section className="services section" id="services" >
         <div className="container">
           <div className="section-header">
             <div className="section-badge green">Our Services</div>
@@ -199,95 +143,42 @@ export default function Home() {
             </p>
           </div>
           <div className="services-grid">
-            <div className="service-card" data-aos="fade-up" data-aos-delay="0">
-              <div className="service-icon"><span>🍺</span></div>
-              <h3>Alcohol De-Addiction</h3>
-              <p>Comprehensive treatment for alcohol dependency including medical detox and long-term support.</p>
-              <a href="#contact" className="service-link" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>
-                Learn More <span>→</span>
-              </a>
-            </div>
-            <div className="service-card" data-aos="fade-up" data-aos-delay="100">
-              <div className="service-icon"><span>💊</span></div>
-              <h3>Drug De-Addiction</h3>
-              <p>Specialized treatment for drug abuse including opioids and prescription drug addiction.</p>
-              <a href="#contact" className="service-link" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>
-                Learn More <span>→</span>
-              </a>
-            </div>
-            <div className="service-card" data-aos="fade-up" data-aos-delay="200">
-              <div className="service-icon"><span>🧠</span></div>
-              <h3>Mental Health Care</h3>
-              <p>Treatment for depression, anxiety, bipolar disorder with personalized care plans.</p>
-              <a href="#contact" className="service-link" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>
-                Learn More <span>→</span>
-              </a>
-            </div>
-            <div className="service-card" data-aos="fade-up" data-aos-delay="300">
-              <div className="service-icon"><span>🎮</span></div>
-              <h3>Behavioral Addictions</h3>
-              <p>Help for gaming, social media, gambling and other behavioral dependencies.</p>
-              <a href="#contact" className="service-link" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>
-                Learn More <span>→</span>
-              </a>
-            </div>
-            <div className="service-card" data-aos="fade-up" data-aos-delay="400">
-              <div className="service-icon"><span>👨‍👩‍👧‍👦</span></div>
-              <h3>Family Counseling</h3>
-              <p>Support for families affected by addiction to rebuild relationships.</p>
-              <a href="#contact" className="service-link" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>
-                Learn More <span>→</span>
-              </a>
-            </div>
-            <div className="service-card" data-aos="fade-up" data-aos-delay="500">
-              <div className="service-icon"><span>🔄</span></div>
-              <h3>Aftercare Program</h3>
-              <p>Continued support with follow-up sessions and relapse prevention.</p>
-              <a href="#contact" className="service-link" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>
-                Learn More <span>→</span>
-              </a>
-            </div>
+            {[
+              { title: "12 Step", icon: "👣" },
+              { title: "AA & NA Meetings", icon: "🤝" },
+              { title: "Alcoholism Treatment", icon: "🍷" },
+              { title: "Ayurveda Treatment", icon: "🌿" },
+              { title: "Depression", icon: "🌦️" },
+              { title: "Detoxification", icon: "💧" },
+              { title: "Drug Addiction Treatment", icon: "💊" },
+              { title: "Family Counseling", icon: "👨‍👩‍👧‍👦" },
+              { title: "Gambling Addiction", icon: "🎲" },
+              { title: "Mental Health Treatment", icon: "🧠" },
+              { title: "Nasha Mukti Kendra", icon: "🏥" },
+              { title: "Occupational Therapy", icon: "💼" },
+              { title: "Out Patient", icon: "🚶" },
+              { title: "Prevention", icon: "🛡️" },
+              { title: "Psychotherapy", icon: "🛋️" },
+              { title: "Relapse Prevention", icon: "🛑" },
+              { title: "Residential Rehabilitation", icon: "🏠" },
+              { title: "Smoking Cessation", icon: "🚬" },
+              { title: "Substance Abuse Counselling", icon: "💬" },
+              { title: "Yoga and Meditation", icon: "🧘" },
+              { title: "Youth Deaddiction", icon: "🧢" },
+            ].map((service, index) => (
+              <div key={index} className="service-card" data-aos="fade-up" data-aos-delay={index * 50}>
+                <div className="service-icon"><span>{service.icon}</span></div>
+                <h3>{service.title}</h3>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
+      </section >
 
-      {/* Statistics Section */}
-      <section className="statistics section" ref={statsRef}>
-        <div className="container">
-          <div className="section-header">
-            <div className="section-badge" style={{ background: "rgba(255,255,255,0.1)", color: "#fff", borderColor: "rgba(255,255,255,0.2)" }}>Our Impact</div>
-            <h2 className="section-title">Transforming <span style={{ color: "var(--green-400)" }}>Lives</span></h2>
-            <p className="section-subtitle">
-              Numbers that reflect our commitment to building a healthier community.
-            </p>
-          </div>
-          <div className="stats-grid">
-            <div className="stat-card" data-aos="zoom-in" data-aos-delay="0">
-              <div className="stat-icon">👥</div>
-              <div className="stat-number">{counters.patients.toLocaleString()}+</div>
-              <div className="stat-label">Patients Treated</div>
-            </div>
-            <div className="stat-card" data-aos="zoom-in" data-aos-delay="100">
-              <div className="stat-icon">📅</div>
-              <div className="stat-number">{counters.years}+</div>
-              <div className="stat-label">Years Experience</div>
-            </div>
-            <div className="stat-card" data-aos="zoom-in" data-aos-delay="200">
-              <div className="stat-icon">👨‍⚕️</div>
-              <div className="stat-number">{counters.doctors}+</div>
-              <div className="stat-label">Expert Doctors</div>
-            </div>
-            <div className="stat-card" data-aos="zoom-in" data-aos-delay="300">
-              <div className="stat-icon">✅</div>
-              <div className="stat-number">{counters.success}%</div>
-              <div className="stat-label">Success Rate</div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Testimonials Section */}
-      <section className="testimonials section" id="testimonials">
+      < section className="testimonials section" id="testimonials" >
         <div className="container">
           <div className="section-header">
             <div className="section-badge">Success Stories</div>
@@ -353,10 +244,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* CTA Section */}
-      <section className="cta">
+      < section className="cta" >
         <div className="container">
           <div className="cta-content" data-aos="zoom-in">
             <h2>Take the First Step Towards Recovery</h2>
@@ -365,14 +256,14 @@ export default function Home() {
               every step of the way. Call us today for a free, confidential consultation.
             </p>
             <button className="btn btn-white" onClick={() => scrollToSection("contact")}>
-              📞 Call Now: +91 9755209205
+              📞 Call Now: +91 9755209205 / 9755369205
             </button>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Contact Section */}
-      <section className="contact section" id="contact">
+      < section className="contact section" id="contact" >
         <div className="container">
           <div className="contact-content">
             <div className="contact-info" data-aos="fade-right">
@@ -418,7 +309,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Footer moved to layout */}
 

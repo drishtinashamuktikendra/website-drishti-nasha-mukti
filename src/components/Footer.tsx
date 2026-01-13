@@ -81,7 +81,8 @@ export default function Footer() {
                         <h4>Contact Info</h4>
                         <ul className="footer-links">
                             <li>
-                                <a href="tel:+919755209205">+91 9755209205</a>
+                                <a href="tel:+919755209205">+91 9755209205</a> <br />
+                                <a href="tel:+919755369205">+91 9755369205</a>
                             </li>
                             <li>
                                 <a href="mailto:drishtinashamuktikendra@gmail.com">
@@ -89,7 +90,7 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="#">New Delhi, India</a>
+                                <a href="#">Hill Crist Society, B 1, near Gangotri Heights, Chuna Bhatti, Bhopal, Madhya Pradesh 462016</a>
                             </li>
                             <li>
                                 <a href="#">24/7 Helpline</a>

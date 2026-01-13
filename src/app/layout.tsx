@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
+import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import AOSInit from "@/components/AOSInit";
 import "./globals.css";
@@ -26,7 +27,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AOSInit />
-        <Navbar />
+        <div className="fixed-header-wrapper">
+          <TopBar />
+          <Navbar />
+        </div>
         {children}
         <Footer />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-6QNC2C3DWB" strategy="afterInteractive" />
