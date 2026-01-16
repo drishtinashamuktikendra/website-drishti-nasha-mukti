@@ -17,64 +17,75 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSlider />
 
-      {/* About Section */}
-      < section className="about section" id="about" >
+      {/* About Section - New Premium Design */}
+      <section className="about-new section" id="about">
         <div className="container">
-          <div className="about-content">
-            <div className="about-image-wrapper" data-aos="fade-right">
-              <div className="about-image-box">
-                <span className="about-image-icon">🏥</span>
-              </div>
-              <div className="about-accent-card">
-                <h3>10+</h3>
-                <p>Years of Excellence</p>
+          <div className="about-new-header">
+            <div className="section-badge green">About Us</div>
+            <h2 className="about-new-title">
+              Your Journey to <span className="gradient-text">Recovery</span> Starts Here
+            </h2>
+            <p className="about-new-subtitle">
+              Drishti Nasha Mukti Evam Manochikitsa Kendra is a premier rehabilitation center
+              dedicated to helping individuals overcome addiction through a holistic approach.
+            </p>
+          </div>
+
+          <div className="about-new-grid">
+            {/* Main Feature Card */}
+            <div className="about-main-card">
+              <div className="about-main-card-content">
+                <div className="about-main-icon">
+                  <span>🎯</span>
+                </div>
+                <h3>Our Mission</h3>
+                <p>
+                  We believe every individual deserves a chance to break free from addiction.
+                  Our mission is to provide compassionate, evidence-based treatment that addresses
+                  the root causes and empowers lasting transformation.
+                </p>
+                <div className="about-main-stats">
+                  <div className="about-stat-item">
+                    <span className="stat-number">24/7</span>
+                    <span className="stat-label">Support</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="about-text" data-aos="fade-left" data-aos-delay="200">
-              <div className="section-badge">About Us</div>
-              <h2>Reclaim Your Life with <span className="blue">Drishti</span></h2>
-              <p>
-                Drishti Nasha Mukti Evam Manochikitsa Kendra is a premier rehabilitation center dedicated to helping
-                individuals overcome addiction and mental health challenges through a holistic approach.
-              </p>
-              <p>
-                With experienced psychiatrists, psychologists, and counselors, we provide personalized
-                treatment plans. Our serene environment ensures a safe and supportive recovery journey.
-              </p>
-              <div className="about-features">
-                <div className="about-feature">
-                  <div className="about-feature-icon">🏥</div>
-                  <div className="about-feature-text">
-                    <h4>Medical Detox</h4>
-                    <p>Safe withdrawal process</p>
-                  </div>
-                </div>
-                <div className="about-feature">
-                  <div className="about-feature-icon">🧠</div>
-                  <div className="about-feature-text">
-                    <h4>Therapy Sessions</h4>
-                    <p>Individual & group</p>
-                  </div>
-                </div>
-                <div className="about-feature">
-                  <div className="about-feature-icon">🧘</div>
-                  <div className="about-feature-text">
-                    <h4>Yoga & Meditation</h4>
-                    <p>Holistic healing</p>
-                  </div>
-                </div>
-                <div className="about-feature">
-                  <div className="about-feature-icon">👨‍👩‍👧</div>
-                  <div className="about-feature-text">
-                    <h4>Family Support</h4>
-                    <p>Inclusive recovery</p>
-                  </div>
-                </div>
-              </div>
+
+            {/* Feature Cards */}
+            <div className="about-feature-card blue-card">
+              <div className="about-feature-card-icon">🏥</div>
+              <h4>Medical Detox</h4>
+              <p>Safe, supervised withdrawal with 24/7 medical care and personalized treatment plans.</p>
+            </div>
+
+            <div className="about-feature-card green-card">
+              <div className="about-feature-card-icon">🧠</div>
+              <h4>Expert Therapy</h4>
+              <p>Individual and group sessions with certified psychiatrists and psychologists.</p>
+            </div>
+
+            <div className="about-feature-card purple-card">
+              <div className="about-feature-card-icon">🧘</div>
+              <h4>Holistic Healing</h4>
+              <p>Yoga, meditation, and mindfulness practices for complete mind-body recovery.</p>
+            </div>
+
+            <div className="about-feature-card orange-card">
+              <div className="about-feature-card-icon">👨‍👩‍👧</div>
+              <h4>Family Support</h4>
+              <p>Comprehensive counseling to help families understand and support recovery.</p>
             </div>
           </div>
+
+          <div className="about-cta-wrapper">
+            <Link href="/#contact" className="btn btn-blue">
+              Start Your Recovery Journey <span>→</span>
+            </Link>
+          </div>
         </div>
-      </section >
+      </section>
 
       {/* Services Section */}
       < section className="services section" id="services" >
@@ -190,21 +201,51 @@ export default function Home() {
         </div>
       </section >
 
-      {/* CTA Section */}
-      < section className="cta" >
+      {/* CTA Section - Premium Design */}
+      <section className="cta-premium">
+        <div className="cta-decor cta-decor-1"></div>
+        <div className="cta-decor cta-decor-2"></div>
+        <div className="cta-decor cta-decor-3"></div>
         <div className="container">
-          <div className="cta-content" data-aos="zoom-in">
-            <h2>Take the First Step Towards Recovery</h2>
+          <div className="cta-premium-content">
+            <div className="cta-badge">
+              <span className="cta-badge-icon">💚</span>
+              <span>Free Confidential Consultation</span>
+            </div>
+            <h2>Take the First Step Towards <span>Recovery</span></h2>
             <p>
-              You are not alone in this journey. Our team of experts is here to guide you
-              every step of the way. Call us today for a free, confidential consultation.
+              You are not alone in this journey. Our compassionate team of experts
+              is here to guide you every step of the way, 24/7.
             </p>
-            <button className="btn btn-white" onClick={() => scrollToSection("contact")}>
-              📞 Call Now: +91 9755209205 / 9755369205
-            </button>
+            <div className="cta-buttons">
+              <a href="tel:+919755209205" className="cta-btn cta-btn-primary">
+                <span className="cta-btn-icon">📞</span>
+                <span className="cta-btn-text">
+                  <span className="cta-btn-label">Call Now</span>
+                  <span className="cta-btn-number">+91 9755209205</span>
+                </span>
+              </a>
+              <a
+                href="https://wa.me/919755209205?text=Hi%2C%20I%20need%20help%20with%20addiction%20treatment"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-btn cta-btn-secondary"
+              >
+                <span className="cta-btn-icon">💬</span>
+                <span className="cta-btn-text">
+                  <span className="cta-btn-label">WhatsApp Us</span>
+                  <span className="cta-btn-number">Quick Response</span>
+                </span>
+              </a>
+            </div>
+            <div className="cta-trust">
+              <span>✓ Government Registered</span>
+              <span>✓ 24/7 Support</span>
+              <span>✓ Confidential Care</span>
+            </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Contact Section */}
       < section className="contact section" id="contact" >

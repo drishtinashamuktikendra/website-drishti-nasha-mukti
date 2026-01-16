@@ -132,20 +132,7 @@ export default function HeroSlider() {
                     </div>
 
                     {/* Stats */}
-                    <div className="hero-stats">
-                        <div className="hero-stat">
-                            <span className="stat-number">500+</span>
-                            <span className="stat-label">Lives Transformed</span>
-                        </div>
-                        <div className="hero-stat">
-                            <span className="stat-number">15+</span>
-                            <span className="stat-label">Years Experience</span>
-                        </div>
-                        <div className="hero-stat">
-                            <span className="stat-number">24/7</span>
-                            <span className="stat-label">Expert Support</span>
-                        </div>
-                    </div>
+
                 </div>
 
                 {/* Floating Card */}

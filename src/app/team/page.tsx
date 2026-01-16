@@ -7,7 +7,7 @@ const teamMembers = [
     {
         id: 1,
         name: 'Syed Farha Ali',
-        designation: 'Managing Director & Psychologist',
+        designation: '(Managing Director / Psychologist)',
         image: '/team/Syed_Farha_Ali_Managing Director_Psychologist.jpeg',
         linkedin: '#',
         twitter: '#'
@@ -15,7 +15,7 @@ const teamMembers = [
     {
         id: 2,
         name: 'Aqsa Ansar',
-        designation: 'Psychologist',
+        designation: '(Psychologist)',
         image: '/team/Aqsa_Ansar_Psychologist.jpeg',
         linkedin: '#',
         twitter: '#'
@@ -23,8 +23,16 @@ const teamMembers = [
     {
         id: 3,
         name: 'Vivek Yadav',
-        designation: 'Psychiatrist',
+        designation: '(Psychiatrist)',
         image: '/team/vivek_yadav_psychiatrist.jpeg',
+        linkedin: '#',
+        twitter: '#'
+    },
+    {
+        id: 4,
+        name: 'Kaushlendra Singh Bhadouriya',
+        designation: '(Rehabilitation Counselor / Psychologist)',
+        image: '/team/Kaushlendra.jpeg',
         linkedin: '#',
         twitter: '#'
     }

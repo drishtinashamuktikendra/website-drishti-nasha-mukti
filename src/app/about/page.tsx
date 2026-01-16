@@ -75,7 +75,7 @@ export default function About() {
                                 />
                             </div>
                             <h3>Syed Farha Ali</h3>
-                            <p className="team-role">Managing Director & Psychologist</p>
+                            <p className="team-role">(Managing Director / Psychologist)</p>
                             <p className="team-bio">Guiding force behind Drishti's compassionate care approach.</p>
                         </div>
 
@@ -89,7 +89,7 @@ export default function About() {
                                 />
                             </div>
                             <h3>Aqsa Ansar</h3>
-                            <p className="team-role">Psychologist</p>
+                            <p className="team-role">(Psychologist)</p>
                             <p className="team-bio">Expert in psychological assessment and therapy.</p>
                         </div>
                         <div className="team-card">
@@ -102,8 +102,21 @@ export default function About() {
                                 />
                             </div>
                             <h3>Vivek Yadav</h3>
-                            <p className="team-role">Psychiatrist</p>
+                            <p className="team-role">(Psychiatrist)</p>
                             <p className="team-bio">Specialist in psychiatric care and mental health recovery.</p>
+                        </div>
+                        <div className="team-card">
+                            <div className="team-avatar" style={{ position: 'relative', overflow: 'hidden' }}>
+                                <Image
+                                    src="/team/Kaushlendra.jpeg"
+                                    alt="Kaushlendra Singh Bhadouriya"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            </div>
+                            <h3>Kaushlendra Singh Bhadouriya</h3>
+                            <p className="team-role">(Rehabilitation Counselor / Psychologist)</p>
+                            <p className="team-bio">Dedicated to guiding patients on their recovery journey.</p>
                         </div>
                     </div>
                 </div>
@@ -151,75 +164,50 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Approach Section */}
-            <section className="approach-section section">
-                <div className="container">
-                    <div className="approach-content">
-                        <div className="approach-text">
-                            <div className="section-badge green">Our Approach</div>
-                            <h2>Holistic <span className="blue">Treatment</span> Philosophy</h2>
-                            <p>
-                                We understand that addiction is a complex condition that affects every aspect of a person&apos;s life.
-                                That&apos;s why our treatment approach addresses not just the physical dependency, but also the
-                                psychological, emotional, and social factors that contribute to addiction.
-                            </p>
-                            <div className="approach-points">
-                                <div className="approach-point">
-                                    <span className="approach-check">✓</span>
-                                    <span>Medical Detoxification under expert supervision</span>
-                                </div>
-                                <div className="approach-point">
-                                    <span className="approach-check">✓</span>
-                                    <span>Individual & Group Therapy sessions</span>
-                                </div>
-                                <div className="approach-point">
-                                    <span className="approach-check">✓</span>
-                                    <span>Yoga & Meditation for mental wellness</span>
-                                </div>
-                                <div className="approach-point">
-                                    <span className="approach-check">✓</span>
-                                    <span>Family Counseling & Support programs</span>
-                                </div>
-                                <div className="approach-point">
-                                    <span className="approach-check">✓</span>
-                                    <span>Aftercare & Relapse Prevention planning</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="approach-stats">
-                            <div className="approach-stat-card">
-                                <div className="approach-stat-number">95%</div>
-                                <div className="approach-stat-label">Success Rate</div>
-                            </div>
-                            <div className="approach-stat-card">
-                                <div className="approach-stat-number">5000+</div>
-                                <div className="approach-stat-label">Lives Transformed</div>
-                            </div>
-                            <div className="approach-stat-card">
-                                <div className="approach-stat-number">10+</div>
-                                <div className="approach-stat-label">Years Experience</div>
-                            </div>
-                            <div className="approach-stat-card">
-                                <div className="approach-stat-number">24/7</div>
-                                <div className="approach-stat-label">Support Available</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            {/* CTA Section */}
-            <section className="cta">
+
+            {/* CTA Section - Premium Design */}
+            <section className="cta-premium">
+                <div className="cta-decor cta-decor-1"></div>
+                <div className="cta-decor cta-decor-2"></div>
+                <div className="cta-decor cta-decor-3"></div>
                 <div className="container">
-                    <div className="cta-content">
-                        <h2>Ready to Begin Your Recovery?</h2>
+                    <div className="cta-premium-content">
+                        <div className="cta-badge">
+                            <span className="cta-badge-icon">💚</span>
+                            <span>Free Confidential Consultation</span>
+                        </div>
+                        <h2>Ready to Begin Your <span>Recovery</span>?</h2>
                         <p>
                             Take the first step towards a healthier, addiction-free life.
-                            Our caring team is here to support you every step of the way.
+                            Our caring team is here to support you every step of the way, 24/7.
                         </p>
-                        <Link href="/#contact" className="btn btn-white">
-                            📞 Call Now: +91 9755209205
-                        </Link>
+                        <div className="cta-buttons">
+                            <a href="tel:+919755209205" className="cta-btn cta-btn-primary">
+                                <span className="cta-btn-icon">📞</span>
+                                <span className="cta-btn-text">
+                                    <span className="cta-btn-label">Call Now</span>
+                                    <span className="cta-btn-number">+91 9755209205</span>
+                                </span>
+                            </a>
+                            <a
+                                href="https://wa.me/919755209205?text=Hi%2C%20I%20need%20help%20with%20addiction%20treatment"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="cta-btn cta-btn-secondary"
+                            >
+                                <span className="cta-btn-icon">💬</span>
+                                <span className="cta-btn-text">
+                                    <span className="cta-btn-label">WhatsApp Us</span>
+                                    <span className="cta-btn-number">Quick Response</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div className="cta-trust">
+                            <span>✓ Government Registered</span>
+                            <span>✓ 24/7 Support</span>
+                            <span>✓ Confidential Care</span>
+                        </div>
                     </div>
                 </div>
             </section>
