@@ -40,10 +40,28 @@ export default function Gallery() {
         { id: 22, type: "image", category: "rehab-center", title: "Rehab Centre View 10", size: "large", src: "/centre/10.jpeg" },
         { id: 23, type: "image", category: "rehab-center", title: "Rehab Centre View 11", size: "small", src: "/centre/11.jpeg" },
         { id: 24, type: "image", category: "rehab-center", title: "Rehab Centre View 12", size: "medium", src: "/centre/12.jpeg" },
+        // News
+        {
+            id: 25,
+            type: "image",
+            category: "news",
+            title: "Featured in News",
+            size: "large",
+            src: "/events/event-3.jpeg"
+        },
+        {
+            id: 26,
+            type: "image",
+            category: "news",
+            title: "Featured in News",
+            size: "large",
+            src: "/events/event-4.jpeg"
+        },
     ];
 
     const filters = [
         { id: "all", label: "All" },
+        { id: "news", label: "Featured in News" },
         { id: "rehab-center", label: "Rehab Center" },
         { id: "events", label: "Events" },
         { id: "facilities", label: "Facilities" },
@@ -125,8 +143,9 @@ export default function Gallery() {
                                             ) : (
                                                 <span className="bento-icon">
                                                     {item.category === 'events' ? '🎉' :
-                                                        item.category === 'facilities' ? '🏥' :
-                                                            item.category === 'rehab-center' ? '🏢' : '🧘'}
+                                                        item.category === 'news' ? '📰' :
+                                                            item.category === 'facilities' ? '🏥' :
+                                                                item.category === 'rehab-center' ? '🏢' : '🧘'}
                                                 </span>
                                             )}
                                         </div>
@@ -174,8 +193,9 @@ export default function Gallery() {
                                 <>
                                     <span className="lightbox-icon">
                                         {filteredItems[currentImage]?.category === 'events' ? '🎉' :
-                                            filteredItems[currentImage]?.category === 'facilities' ? '🏥' :
-                                                filteredItems[currentImage]?.category === 'rehab-center' ? '🏢' : '🧘'}
+                                            filteredItems[currentImage]?.category === 'news' ? '📰' :
+                                                filteredItems[currentImage]?.category === 'facilities' ? '🏥' :
+                                                    filteredItems[currentImage]?.category === 'rehab-center' ? '🏢' : '🧘'}
                                     </span>
                                     <h3>{filteredItems[currentImage]?.title}</h3>
                                     <p>Image placeholder - Add your photos here</p>
